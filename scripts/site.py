@@ -10,7 +10,7 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parent.parent
 FILES = ('index.html', 'assets/vendor/bulma.min.css', 'assets/vendor/academic-template.css', 'assets/project.css',
          'assets/vendor/BULMA-LICENSE', 'assets/teaser.png', 'assets/pipeline.png',
-         'assets/paper.pdf', 'assets/results.png', 'assets/results.pdf', '.nojekyll') + tuple(
+         'assets/results-ab.png', '.nojekyll') + tuple(
     f'assets/videos/{name}{ext}'
     for name in ('project-video', 'attention', 'drink', 'making-way')
     for ext in ('.mp4', '.vtt')
@@ -48,10 +48,8 @@ def check():
     assert all(tag in page.tags for tag in ('main', 'footer')), 'Missing landmarks'
     assert 'name="viewport"' in source and '<html lang="en">' in source
     assert 'Submitted to RA-L' in source, 'Submission status missing'
-    assert 'Anonymous Authors' in source, 'Anonymous review byline missing'
-    assert 'citation_author' not in source and 'equal-contribution' not in source, 'Identifying author metadata must be omitted'
-    assert 'BibTeX' not in source, 'Named citation must stay hidden during review'
-    assert '/Users/' not in (ROOT / 'README.md').read_text(), 'README must not expose a personal local path'
+    assert 'https://arxiv.org/abs/2610.34534' in source, 'Verified arXiv destination missing'
+    assert 'Anonymous Authors' not in source, 'Named presentation has replaced the anonymous review version'
     for href in page.links + page.assets:
         assert href and href != '#', 'Empty or placeholder link'
         url = urlsplit(href)
@@ -70,6 +68,9 @@ def build():
     check()
     target = ROOT / 'dist'
     target.mkdir(exist_ok=True)
+    for stale in target.rglob('*'):
+        if stale.is_file() and stale.relative_to(target).as_posix() not in FILES:
+            stale.unlink()
     for name in FILES:
         dest = target / name
         dest.parent.mkdir(parents=True, exist_ok=True)

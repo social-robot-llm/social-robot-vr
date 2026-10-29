@@ -4,3 +4,17 @@
 .author-block{white-space:normal}.publication-authors{line-height:1.7}.venue{font-weight:600}.equal-contribution{font-size:.8em;color:#64748b}.publication-links{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}.publication-links .button{min-height:44px;gap:8px;padding-left:22px;padding-right:22px}.publication-links .button[disabled]{opacity:.6;cursor:default;transform:none;box-shadow:none}.resource-note{font-size:12px;color:#64748b;margin-top:10px}.resource-icon{font-size:16px}.teaser-image{display:block;width:100%;height:auto}.teaser .subtitle{margin-top:1.5rem;font-size:1.2rem;line-height:1.5}.hero.teaser .hero-body{padding-top:0}.scope-note{font-size:13px;color:#64748b}.framework-details{margin-top:2rem;text-align:left}.framework-details summary,.citation summary{cursor:pointer;font-size:1.1rem;font-weight:600;padding:10px 0}.framework-details figure{max-width:500px;margin:20px auto}.pipeline-image{display:block;width:100%;height:auto}figcaption{font-size:12px;color:#64748b;text-align:center;margin-top:12px}.citation pre{white-space:pre-wrap;overflow-wrap:anywhere}.footer{padding:3rem 1.5rem}.skip-link{position:absolute;left:16px;top:-100px;background:white;padding:12px;z-index:10}.skip-link:focus{top:12px}a:focus-visible,summary:focus-visible{outline:3px solid #2563eb;outline-offset:4px}
 @media(max-width:768px){.hero-body{padding-top:2.5rem;padding-bottom:2rem}.publication-title{font-size:2rem!important;line-height:1.15!important}.teaser .hero-body{padding-bottom:2rem}.teaser .subtitle{font-size:1rem}.section{padding:2rem 1.5rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Compact publication header and teaser, retaining the upstream layout. */
+.publication-header .hero-body{padding:2.5rem 1.5rem 1rem}
+.publication-header .publication-title{margin-bottom:1.25rem!important}
+.publication-header .publication-authors{margin-bottom:.5rem;line-height:1.5}
+.publication-header .publication-links{align-items:center}
+.publication-links .link-block{display:flex}
+.publication-affiliations{font-size:1rem;line-height:1.6;margin-bottom:1rem}
+.hero.teaser .hero-body{padding-top:0;padding-bottom:2rem}
+.teaser figure{max-width:680px;margin:0 auto}
+.teaser-caption{font-size:1rem;line-height:1.6;margin-top:1rem;color:#475569}
+.architecture-figure figcaption,.results-figure figcaption{font-size:.875rem;line-height:1.6;color:#475569}
+.results-figure{margin-bottom:0}
+@media(max-width:768px){.publication-header .hero-body{padding:2rem 1.25rem 1rem}.publication-affiliations{font-size:.875rem}.teaser-caption{font-size:.9375rem}.hero.teaser .hero-body{padding-bottom:1.5rem}}

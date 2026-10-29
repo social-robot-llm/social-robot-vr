@@ -4,7 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="A multimodal framework for speech, vision, and social touch, evaluated with 18 participants in virtual reality. Submitted to RA-L.">
+  <meta name="description" content="Speech, vision, and social touch in a shared interaction history: a vision-language model generates coordinated robot movement and speech. Submitted to RA-L.">
+  <meta name="citation_author" content="Xu, Richard">
+  <meta name="citation_author" content="Crowder, Dakarai">
+  <meta name="citation_author" content="Block, Alexis E.">
+  <meta name="citation_author" content="Yuan, Wenzhen">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2610.34534">
   <meta name="theme-color" content="#ffffff">
   <title>Multimodal Socially Aware Framework for Human-Robot Interaction in Virtual Reality</title>
   <meta name="citation_title" content="Multimodal Socially Aware Framework for Human-Robot Interaction in Virtual Reality">
@@ -15,31 +20,38 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <main id="main">
-  <section class="hero">
+  <section class="hero publication-header">
     <div class="hero-body"><div class="container is-max-desktop"><div class="columns is-centered"><div class="column has-text-centered">
       <h1 id="project-title" class="title is-1 publication-title">Multimodal Socially Aware Framework for Human-Robot Interaction in Virtual Reality</h1>
       <div class="is-size-5 publication-authors">
-        <span class="author-block">Anonymous Authors</span><br>
-        <span class="venue">Submitted to RA-L · Under review</span>
+        <span class="author-block">Richard Xu<sup>1,*</sup>,</span>
+        <span class="author-block">Dakarai Crowder<sup>1,*</sup>,</span>
+        <span class="author-block">Alexis E. Block<sup>2</sup>,</span>
+        <span class="author-block">Wenzhen Yuan<sup>1</sup></span>
+      </div>
+      <div class="publication-affiliations">
+        <span><sup>1</sup> University of Illinois at Urbana-Champaign</span><br>
+        <span><sup>2</sup> Case Western Reserve University</span><br>
+        <span class="venue">Submitted to RA-L</span><br>
+        <small class="equal-contribution"><sup>*</sup> Equal contribution</small>
       </div>
       <div class="publication-links" aria-label="Project resources">
-        <span class="link-block"><a class="button is-normal is-rounded is-dark" href="assets/paper.pdf" download="anonymous-manuscript.pdf"><span class="resource-icon" aria-hidden="true">▤</span><span>Paper</span></a></span>
+        <span class="link-block"><a class="button is-normal is-rounded is-dark" href="https://arxiv.org/abs/2610.34534" aria-label="Read the paper on arXiv"><span class="resource-icon" aria-hidden="true">▤</span><span>Paper</span></a></span>
         <span class="link-block"><a class="button is-normal is-rounded is-dark" href="#video"><span class="resource-icon" aria-hidden="true">▶</span><span>Video</span></a></span>
         <span class="link-block"><button class="button is-normal is-rounded is-dark" disabled><span>Code · Coming soon</span></button></span>
       </div>
-      <p class="resource-note">Anonymous manuscript for review. Code release coming soon.</p>
+      <p class="resource-note">arXiv preprint · Code release coming soon.</p>
     </div></div></div></div>
   </section>
   <section class="hero teaser" aria-label="Project overview">
     <div class="container is-max-desktop"><div class="hero-body">
-      <figure><a href="assets/teaser.png" aria-label="Open full-size project overview"><img class="teaser-image" src="assets/teaser.png" width="1800" height="1438" alt="A VR participant speaks to and touches Reachy. Speech, vision, and touch feed a vision-language model that generates coordinated robot movement and speech."></a></figure>
-      <h2 class="subtitle has-text-centered">Speech, vision, and social touch—together in one human–robot interaction.</h2>
+      <figure><a href="assets/teaser.png" aria-label="Open full-size project overview"><img class="teaser-image" src="assets/teaser.png" width="1800" height="1438" alt="A VR participant speaks to and touches Reachy. Speech, vision, and touch feed a vision-language model that generates coordinated robot movement and speech."></a><figcaption class="teaser-caption">From multimodal input to coordinated behavior: speech, vision, and touch inform a vision-language model that selects robot actions and generates speech.</figcaption></figure>
     </div></div>
   </section>
   <section class="section hero is-light" aria-labelledby="overview-title">
     <div class="container is-max-desktop"><div class="columns is-centered has-text-centered"><div class="column is-four-fifths">
       <h2 id="overview-title" class="title is-3">Overview</h2>
-      <div class="content has-text-justified"><p>We integrate speech, vision, and social touch to generate coordinated robot speech and movement. In a VR study with 18 participants across five social scenarios, autonomous behavior was rated above neutral for naturalness and appropriateness, while human teleoperation scored higher.</p></div>
+      <div class="content has-text-justified"><p>Our framework combines speech, vision, and social touch in a shared interaction history. Speech and touch trigger a vision-language model, while a robot-eye camera supplies scene context. The model generates action–speech pairs that coordinate the robot’s movements and spoken responses across turns.</p></div>
     </div></div></div>
   </section>
   <section id="video" class="section" aria-labelledby="video-title">
@@ -55,7 +67,7 @@
   <section id="system" class="section" aria-labelledby="system-title">
     <div class="container is-max-desktop">
       <h2 id="system-title" class="title is-3 has-text-centered">System Architecture</h2>
-      <figure class="architecture-figure"><a href="assets/pipeline.png" aria-label="Open full-size system architecture"><img class="pipeline-image" src="assets/pipeline.png" loading="lazy" alt="Speech and touch enter interaction history while a robot camera frame provides context. A vision-language model generates a scene description and action–speech pairs for motion execution and text-to-speech."></a><figcaption>Speech and touch trigger reasoning; vision provides context. Pipeline from the manuscript.</figcaption></figure>
+      <figure class="architecture-figure"><a href="assets/pipeline.png" aria-label="Open full-size system architecture"><img class="pipeline-image" src="assets/pipeline.png" loading="lazy" alt="Speech and touch enter interaction history while a robot camera frame provides context. A vision-language model generates a scene description and action–speech pairs for motion execution and text-to-speech."></a><figcaption>Speech and recognized touch gestures update the interaction history and trigger a response. A camera frame adds visual context; the vision-language model returns action–speech pairs for motion execution and text-to-speech.</figcaption></figure>
     </div>
   </section>
   <section id="examples" class="section" aria-labelledby="examples-title">
@@ -89,8 +101,7 @@
   <section id="results" class="section hero is-light" aria-labelledby="findings-title">
     <div class="container is-max-desktop"><div class="columns is-centered has-text-centered"><div class="column is-four-fifths">
       <h2 id="findings-title" class="title is-3">Results</h2>
-      <figure class="results-figure"><a href="assets/results.pdf" aria-label="Open the full-resolution manuscript results figure"><img src="assets/results.png" loading="lazy" alt="Manuscript results comparing autonomous and teleoperated behavior: appropriateness and naturalness ratings on a minus-one to plus-one scale, coded conversational events, and touch events by scenario and participant."></a><figcaption>Manuscript results: (A–B) behavior ratings, (C) conversational events, and (D) touch across scenarios. Select the figure for the full-resolution PDF.</figcaption></figure>
-      <div class="content"><p>Conversational timing, clarification, and spatial coordination emerged as key areas to improve.</p><p class="scope-note">Evaluated in virtual reality; physical-robot validation is future work.</p></div>
+      <figure class="results-figure"><img src="assets/results-ab.png" loading="lazy" width="2201" height="1228" alt="Panels A and B compare autonomous and teleoperated behavior across five scenarios: social appropriateness and naturalness ratings on a minus-one to plus-one scale. Green shows autonomous behavior; gold shows human teleoperation."><figcaption>Ratings from 18 participants across five VR scenarios: (A) social appropriateness and (B) naturalness, comparing autonomous behavior with human teleoperation. Scale: −1 to +1.</figcaption></figure>
     </div></div></div>
   </section>
 </main>
