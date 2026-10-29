@@ -1,0 +1,11 @@
+{
+  "name": "social-llm-project-page",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local academic project website starter",
+  "scripts": {
+    "check": "python3 scripts/site.py check",
+    "build": "python3 scripts/site.py build",
+    "preview": "python3 scripts/site.py serve"
+  }
+}

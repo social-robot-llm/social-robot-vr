@@ -1,0 +1,11 @@
+# Website attribution
+
+Current revision restores the upstream centered academic layout and uses unchanged local copies of its `static/css/index.css` and `static/css/bulma.min.css`, retrieved from the original repository on 2026-10-28. The page follows the upstream `hero-body`, `container is-max-desktop`, `publication-title`, `publication-authors`, `publication-links` and teaser structure. `assets/project.css` contains small content/accessibility/mobile adjustments. Unused earlier custom styles are not linked or packaged. Template demo content, tracking and unused interactive components are omitted. Bulma 0.9.1 retains its MIT license in `assets/vendor/BULMA-LICENSE`; the website-template attribution/license remains CC BY-SA 4.0.
+
+This starter adapts the section structure and footer of [Eliahu Horwitz’s Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template), itself adapted from [Keunhong Park and collaborators’ Nerfies project page](https://nerfies.github.io/).
+
+Changes on 2026-10-28: replaced sample paper content with labeled pending-content sections; rewrote the visual styling with local system fonts, sage colors and an editorial layout; removed third-party scripts, analytics, sample media, icons and fabricated metadata; added a dependency-free checker, static packager and preview server. This is a minimal adaptation, not a full copy of upstream components.
+
+The adapted website layout is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/), as specified in both upstream README files and website footers. Retain attribution, link to the license, identify modifications, and distribute adaptations under the same license. The upstream HTML has an inconsistent BY-only metadata field; this starter follows the explicit BY-SA website license and footer.
+
+This website license does not grant rights to the manuscript, research code, figures, or media. The selected manuscript figures `media/teaser_v6.pdf` and `media/pipeline_v12.pdf` were rendered to website PNGs without changing their content. They are credited to the paper's authors and retain their original research-content rights, separate from the layout license. Raw LaTeX and private provenance are excluded. The included paper PDF is an anonymized review copy.

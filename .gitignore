@@ -1,0 +1,15 @@
+.DS_Store
+.SuperSurfer/
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+review/
+paper-source/
+
+
+# Private provenance and manuscript working files must not enter the review repository.
+docs/

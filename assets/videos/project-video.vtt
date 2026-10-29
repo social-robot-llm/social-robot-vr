@@ -1,0 +1,119 @@
+WEBVTT
+
+00:00:07.420 --> 00:00:09.120
+User: Hey Reachy, I'm trying to focus.
+
+00:00:15.260 --> 00:00:17.960
+Reachy: I'm sorry, I'll stop the vacuuming right away.
+
+00:00:18.930 --> 00:00:23.032
+People don't just talk. They look, gesture, and touch.
+
+00:00:23.882 --> 00:00:28.635
+Our framework gives a robot all three: touch, vision, and speech.
+
+00:00:29.485 --> 00:00:32.325
+A vision-language model reasons over them together,
+
+00:00:32.325 --> 00:00:34.848
+and responds with coordinated motion and speech.
+
+00:00:35.698 --> 00:00:40.098
+Speech and touch are converted to text, and either one triggers a response.
+
+00:00:40.948 --> 00:00:43.541
+The robot's eye camera adds visual context.
+
+00:00:44.391 --> 00:00:47.349
+An interaction history carries context across turns.
+
+00:00:48.199 --> 00:00:51.559
+Gemini 3 Flash returns a list of action and speech pairs,
+
+00:00:51.559 --> 00:00:54.348
+which the robot performs while speaking in a cloned voice.
+
+00:00:55.198 --> 00:00:57.918
+New input can interrupt the robot at any time:
+
+00:00:57.918 --> 00:01:00.558
+the model decides whether to stop the current motion,
+
+00:01:00.558 --> 00:01:03.180
+and the robot stops talking when the user speaks.
+
+00:01:04.030 --> 00:01:06.800
+Each virtual hand is covered with sphere colliders,
+
+00:01:07.650 --> 00:01:11.919
+and the physics engine reports where, and how hard, they touch the robot.
+
+00:01:12.769 --> 00:01:15.429
+A classifier recognizes eight social touch gestures,
+
+00:01:15.429 --> 00:01:19.240
+from pokes and taps to strokes and punches.
+
+00:01:20.090 --> 00:01:24.506
+The VLM receives it as text: the human pressed your left shoulder once.
+
+00:01:25.356 --> 00:01:29.686
+Eighteen participants wore a Quest 3 headset and custom haptic gloves.
+
+00:01:30.536 --> 00:01:36.796
+They completed five scenarios: asking for a joke, making the robot move, cheering it up,
+
+00:01:36.796 --> 00:01:39.816
+getting its attention while it vacuums, and asking for a drink.
+
+00:01:40.666 --> 00:01:46.523
+Each ran twice: with our system, and with a human teleoperator as an upper baseline.
+
+00:01:47.373 --> 00:01:51.411
+After each one, they rated naturalness and appropriateness in the headset.
+
+00:01:56.523 --> 00:01:59.183
+User: Hey Reachy, can you pass me the water bottle?
+
+00:02:00.593 --> 00:02:02.273
+Reachy: Sure thing, one water coming right up.
+
+00:02:07.773 --> 00:02:09.173
+Reachy: Here you go, stay hydrated.
+
+00:02:12.518 --> 00:02:14.578
+User: Hey, Reachy. I need to go to the bathroom.
+
+00:02:17.038 --> 00:02:18.338
+Reachy: Oh, sure thing.
+
+00:02:18.438 --> 00:02:19.485
+Reachy: I'll step aside so you can pass.
+
+00:02:19.785 --> 00:02:24.125
+Our system was rated above neutral on appropriateness and naturalness,
+
+00:02:24.125 --> 00:02:27.865
+though the teleoperator scored higher, especially on naturalness.
+
+00:02:28.715 --> 00:02:31.695
+Most breakdowns were about conversational timing,
+
+00:02:31.695 --> 00:02:34.951
+with responses taking 3.7 seconds on average.
+
+00:02:35.801 --> 00:02:40.041
+Touch accounted for a larger share of interactions with our system.
+
+00:02:40.041 --> 00:02:43.800
+Whether it was used to repair conversations remains an open question.
+
+00:02:44.650 --> 00:02:47.798
+Touch accounted for a larger share of interactions.
+
+00:02:47.798 --> 00:02:51.130
+Its role in conversational repair needs further study.
+
+00:02:51.130 --> 00:02:56.450
+Next, we will cut latency, add clarifying questions, and move to a physical robot.
+
